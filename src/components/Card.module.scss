@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  background: #15273f;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 15px 15px 20px hsl(214, 75%, 8%);
+
+  h1 {
+    font-size: 1.5rem;
+    width: fit-content;
+
+    &:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+  }
+}
+
+.img_container {
+  position: relative;
+  border-radius: 0.5rem;
+
+  &:hover {
+    .overlay {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .hoverEye {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .hoverEye {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 10px;
+  }
+
+  .imgCard {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+.separator {
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  margin-top: 5px;
+}
+
+.time_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(215, 51%, 70%);
+  margin-top: 6px;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  span img {
+    width: 1.15rem;
+    padding: 0;
+
+  }
+
+  .eth {
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+
+    img {
+      width: 0.75rem;
+      padding: 0;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+
+  img {
+    object-fit: fill;
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 999px;
+    padding: 0;
+  }
+
+  .creator_name {
+    &:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+  }
+}
